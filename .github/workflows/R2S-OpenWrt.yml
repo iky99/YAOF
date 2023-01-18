@@ -51,12 +51,12 @@ jobs:
     - name: Convert Translation
       run: |
         cd openwrt
-        /bin/bash 03_convert_translation.sh
+        #/bin/bash 03_convert_translation.sh
     - name: Make Config
       run: |
         cd openwrt
         cp -rf ../SEED/R2S/config.seed .config
-        /bin/bash 07_fw3.sh
+        #/bin/bash 07_fw3.sh
         #echo -e 'CONFIG_DEVEL=y\nCONFIG_CCACHE=y' >> .config
         make defconfig
     - name: Add ACL
