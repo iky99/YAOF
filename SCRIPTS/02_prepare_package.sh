@@ -156,11 +156,11 @@ svn export https://github.com/Lienol/openwrt/trunk/tools/upx tools/upx
 ### 获取额外的 LuCI 应用、主题和依赖 ###
 # 广告过滤 AdGuard
 #svn export https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome package/new/luci-app-adguardhome
-git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/new/luci-app-adguardhome
-rm -rf ./feeds/packages/net/adguardhome
-svn export https://github.com/openwrt/packages/trunk/net/adguardhome feeds/packages/net/adguardhome
+#git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/new/luci-app-adguardhome
+#rm -rf ./feeds/packages/net/adguardhome
+#svn export https://github.com/openwrt/packages/trunk/net/adguardhome feeds/packages/net/adguardhome
 #sed -i '/\t)/a\\t$(STAGING_DIR_HOST)/bin/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)/AdGuardHome' ./feeds/packages/net/adguardhome/Makefile
-sed -i '/init/d' feeds/packages/net/adguardhome/Makefile
+#sed -i '/init/d' feeds/packages/net/adguardhome/Makefile
 # CPU 控制相关
 svn export -r 19495 https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
 ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
